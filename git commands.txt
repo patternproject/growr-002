@@ -1,0 +1,4 @@
+(.venv) PS C:\Users\ulhaq\Downloads\dd1> git add .  
+(.venv) PS C:\Users\ulhaq\Downloads\dd1> git commit -m "Train a model,ask user for input and classify it accordingly"
+(.venv) PS C:\Users\ulhaq\Downloads\dd1> git remote -v 
+(.venv) PS C:\Users\ulhaq\Downloads\dd1> git push -u origin main

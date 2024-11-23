@@ -1,0 +1,5 @@
+1. Change to project directory
+2. Activate the virtual env
+.venv\Scripts\activate
+3. Run code
+python loan_risk.py

@@ -9,6 +9,7 @@ data = {
     'Income': [4000, 5000, 2000, 3500, 6000],
     'Loan_Amount': [10000, 12000, 5000, 8000, 15000],
     'Review_Sentiment': [0.8, 0.9, 0.6, 0.7, 0.95],  # Proxy from text analysis
+    'Appointment_Bookings': [80, 90, 60, 70, 90], # from Salon 
     'Default': [0, 0, 1, 0, 0]
 }
 
@@ -21,7 +22,7 @@ print(df)
 
 
 # Features and target
-X = df[['Credit_Score', 'Income', 'Loan_Amount', 'Review_Sentiment']]
+X = df[['Credit_Score', 'Income', 'Loan_Amount', 'Review_Sentiment', 'Appointment_Bookings']]
 y = df['Default']
 
 # Split data
@@ -50,13 +51,15 @@ while True:
         income = float(input("Enter Income: "))
         loan_amount = float(input("Enter Loan Amount: "))
         review_sentiment = float(input("Enter Review Sentiment (0 to 1): "))
+        appointment_booking = float(input("Enter Appointment Bookings: "))
 
         # Create a DataFrame for the new data
         new_data = pd.DataFrame([{
             'Credit_Score': credit_score,
             'Income': income,
             'Loan_Amount': loan_amount,
-            'Review_Sentiment': review_sentiment
+            'Review_Sentiment': review_sentiment,
+            'Appointment_Bookings' : appointment_booking
         }])
 
         # Predict using the trained model
